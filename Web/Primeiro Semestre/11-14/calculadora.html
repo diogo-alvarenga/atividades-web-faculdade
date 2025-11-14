@@ -59,7 +59,7 @@ const img = document.getElementById("pi");
 let angulo = 0;
 
 function girarImagem() {
-  angulo += 1; // aumenta 1 grau por frame
+  angulo += 1; 
   img.style.transform = `rotate(${angulo}deg)`;
   requestAnimationFrame(girarImagem);
 }
