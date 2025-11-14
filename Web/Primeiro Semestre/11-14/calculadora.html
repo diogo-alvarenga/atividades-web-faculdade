@@ -5,8 +5,15 @@
 <title>Aula 3 – Operadores</title>
 </head>
 <body>
+<div>
+
+  <div>
+    <img id="pi" src="pi.png" alt="pi" width="50">
+
+  </div>
 
   <div id="div">
+
   <h2>Calculadora Simples com Operadores</h2>
 
   <form action="">
@@ -26,6 +33,7 @@
   <h3>Resultados:</h3>
   <div id="resultado"></div>
   </div>
+</div>
 <script>
 function calcular() {
   let n1 = Number(document.getElementById("n1").value);
@@ -47,8 +55,21 @@ function calcular() {
     <p>Potência: <strong>${potencia}</strong></p>
   `;
 }
+const img = document.getElementById("pi");
+let angulo = 0;
+
+function girarImagem() {
+  angulo += 1; // aumenta 1 grau por frame
+  img.style.transform = `rotate(${angulo}deg)`;
+  requestAnimationFrame(girarImagem);
+}
+
+girarImagem();
+
 </script>
  <style>
+  
+
   p,h3{
     color: white;
   }
