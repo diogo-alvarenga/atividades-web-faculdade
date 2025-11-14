@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Aula 3 – Operadores</title>
+</head>
+<body>
+
+  <div id="div">
+  <h2>Calculadora Simples com Operadores</h2>
+
+  <form action="">
+  <div class="labelcentralizada">
+    <label>Primeiro número:</label><br>
+    <input type="number" id="n1"><br><br>
+
+    <label>Segundo número:</label><br>
+      <input type="number" id="n2"><br><br>
+
+    </div>
+  </form>
+
+  <button onclick="calcular()">Calcular</button>
+
+  
+  <h3>Resultados:</h3>
+  <div id="resultado"></div>
+  </div>
+<script>
+function calcular() {
+  let n1 = Number(document.getElementById("n1").value);
+  let n2 = Number(document.getElementById("n2").value);
+ 
+  let soma = n1 + n2;
+  let sub = n1 - n2;
+  let mult = n1 * n2;
+  let div = n1 / n2;
+  let resto = n1 % n2;
+  let potencia = n1 ** n2;
+ 
+  document.getElementById("resultado").innerHTML = `
+    <p>Soma: <strong>${soma}</strong></p>
+    <p>Subtração: <strong>${sub}</strong></p>
+    <p>Multiplicação: <strong>${mult}</strong></p>
+    <p>Divisão: <strong>${div}</strong></p>
+    <p>Resto da divisão: <strong>${resto}</strong></p>
+    <p>Potência: <strong>${potencia}</strong></p>
+  `;
+}
+</script>
+ <style>
+  p,h3{
+    color: white;
+  }
+  button{
+
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #009688;
+    color: white;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+
+    transition: 0.3s;
+  }
+    h2{
+      color: #f6fffe;
+    }
+    label{
+      text-align: center;
+      font-size: 15px;
+    }
+    .labelcentralizada{
+      text-align: center;
+    }
+    body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #1a2c2a, #000000);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    }
+    form{
+      background-color: rgb(241, 255, 255);
+      padding: 20px;
+      border-radius: 5px;
+    }
+    #div{
+        width: 300px;
+        margin: 0 auto;
+    }
+ </style>
+</body>
+</html>
